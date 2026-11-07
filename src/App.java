@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        int [] peso = peso 
+        int [] peso = new int [cantidadCargas(scanner)];
 
 
     }
@@ -15,7 +15,13 @@ public class App {
         return cantidad;
     }
 
-    public static void cargarPeso()
-        
+    public static void cargarPeso(int [] peso){
+        int longpeso = peso.length;
+         for (int i = 0; i < longpeso; i++) {
+            System.out.println("ingrese el peso:" + (i+1));
+            peso[i] = scanner.nextInt();     
+         }
     }
+
+    
 }
