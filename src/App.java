@@ -12,7 +12,7 @@ public class App {
         System.out.println("pesos total: " + pesoTotal(peso));
         System.out.println("promediode carga: " + promedioCarga(peso));
         System.out.println("peso mayor: " + pesoMayor(peso));
-        System.out.println("pesos mayores al promedio: " + pesoMayorPromedio(peso));
+        System.out.println("ubicacion del peso mayor: " + ubicacionMayor(peso));
 
     }
 
@@ -92,6 +92,19 @@ public class App {
             }
          }
         return contador3;
+    }
+
+    public static int ubicacionMayor(int [] peso) {
+        int mayor = 0;
+        int ubicacion = 0;
+        int longpeso = peso.length;
+         for (int i = 0; i < longpeso; i++) {
+            if (peso[i] > mayor) {
+                mayor = peso[i];
+                ubicacion = (i + 1);
+            }
+         }
+        return ubicacion;
     }
 
 
